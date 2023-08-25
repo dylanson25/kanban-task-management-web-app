@@ -1,31 +1,39 @@
-@import "~bulma/sass/utilities/_all"
-// Set your colors
+@import "/node_modules/bootstrap/scss/functions"
+
 $primary: #635FC7
-$primary-light: findLightColor($primary)
-$primary-dark: findDarkColor($primary)
-
+$secondary: rgba(99, 95, 199, 0.10)
 $success: #42b983
-$success-light: findLightColor($success)
-$success-dark: findDarkColor($success)
-
 $danger: #EA5555
-$danger-light: findLightColor($danger)
-$danger-dark: findDarkColor($danger)
 
-$danger: #EA5555
-$danger-light: findLightColor($danger)
-$danger-dark: findDarkColor($danger)
+$btn-font-weight: 700
 
-// Lists and maps
-$custom-colors: null !default
-$custom-shades: null !default
+$body-bg-dark: #2B2C37
 
-$colors: mergeColorMaps(( "white": ( $white, $black, ), "black": ( $black, $white, ), "light": ( $light, $light-invert, ), "dark": ( $dark, $dark-invert, ), "primary": ( $primary, $primary-invert, $primary-light, $primary-dark, ), "link": ( $link, $link-invert, $link-light, $link-dark, ), "info": ( $info, $info-invert, $info-light, $info-dark, ), "success": ( $success, $success-invert, $success-light, $success-dark, ), "warning": ( $warning, $warning-invert, $warning-light, $warning-dark, ), "danger": ( $danger, $danger-invert, $danger-light, $danger-dark, ),),$custom-colors)
+@import "/node_modules/bootstrap/scss/variables"
+@import "/node_modules/bootstrap/scss/variables-dark"
 
-// Links
-$link: $primary
-$link-invert: $primary-invert
-$link-focus-border: $primary
+@import "/node_modules/@oruga-ui/theme-bootstrap/dist/scss/utils/variables"
 
-@import "~bulma/bulma"
-@import '~@oruga-ui/theme-bulma/dist/scss/bulma'
+@import "/node_modules/bootstrap/scss/bootstrap"
+
+@import "/node_modules/@oruga-ui/theme-bootstrap/dist/scss/bootstrap"
+
+$theme-colors: ( "primary": $primary, "success": $success, "danger": $danger,)
+
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-success:hover,
+.btn-danger:hover,
+:not(.btn-check) + .btn-warning:hover,
+:not(.btn-check) + .btn-success:active,
+:not(.btn-check) + .btn-danger:active,
+:not(.btn-check) + .btn-warning:active
+    color: white
+
+.btn-secondary
+    color: $primary
+.btn-secondary:hover,
+:not(.btn-check) + .btn-secondary:active
+    color: $primary
+    background-color: #635FC740
