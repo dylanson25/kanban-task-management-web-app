@@ -2,9 +2,28 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    {{ THEME }}
   </nav>
   <router-view />
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { onBeforeMount } from 'vue';
+import { useUserPrference } from './store';
+export default defineComponent({
+  setup() {
+    const { THEME, setTheme, installTheme } = useUserPrference();
+
+    onBeforeMount(() => {
+      if (!THEME) setTheme('light');
+      else installTheme(THEME);
+    });
+    return {
+      THEME,
+    };
+  },
+});
+</script>
 
 <style lang="scss">
 #app {
