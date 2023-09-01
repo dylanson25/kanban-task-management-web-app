@@ -1,0 +1,39 @@
+@import "/node_modules/bootstrap/scss/functions"
+
+$primary: #635FC7
+$secondary: rgba(99, 95, 199, 0.10)
+$success: #42b983
+$danger: #EA5555
+
+$btn-font-weight: 700
+
+$body-bg-dark: #2B2C37
+
+@import "/node_modules/bootstrap/scss/variables"
+@import "/node_modules/bootstrap/scss/variables-dark"
+
+@import "/node_modules/@oruga-ui/theme-bootstrap/dist/scss/utils/variables"
+
+@import "/node_modules/bootstrap/scss/bootstrap"
+
+@import "/node_modules/@oruga-ui/theme-bootstrap/dist/scss/bootstrap"
+
+$theme-colors: ( "primary": $primary, "success": $success, "danger": $danger,)
+
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-success:hover,
+.btn-danger:hover,
+:not(.btn-check) + .btn-warning:hover,
+:not(.btn-check) + .btn-success:active,
+:not(.btn-check) + .btn-danger:active,
+:not(.btn-check) + .btn-warning:active
+    color: white
+
+.btn-secondary
+    color: $primary
+.btn-secondary:hover,
+:not(.btn-check) + .btn-secondary:active
+    color: $primary
+    background-color: #635FC740
