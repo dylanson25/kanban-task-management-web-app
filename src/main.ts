@@ -8,9 +8,11 @@ import { bootstrapConfig } from '@oruga-ui/theme-bootstrap';
 import '@oruga-ui/theme-bootstrap/dist/bootstrap.css';
 import '@/assets/sass/style.sass';
 
+import DefaultLayout from './layouts/DefaultLayout.vue';
 const app = createApp(App);
 
 app.use(Oruga, bootstrapConfig);
 app.use(createPinia());
 app.use(router);
+app.component('default-layout', DefaultLayout);
 app.mount('#app');
