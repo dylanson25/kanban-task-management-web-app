@@ -1,6 +1,6 @@
 <template>
   <header class="w-100">
-    <nav class="navbar">
+    <nav class="navbar border-bottom border-light-subtle">
       <div class="container-fluid">
         <a class="navbar-brand">
           <svg
@@ -33,7 +33,9 @@ export default defineComponent({
 <style lang="sass">
 .navbar
     background-color: $white
-.is-dark
+    > .container-fluid
+      padding: 0 24px
+@include color-mode(dark)
     .navbar
         background-color: $darkGrey
 </style>

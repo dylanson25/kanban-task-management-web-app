@@ -1,23 +1,27 @@
 <template>
-  <main>
-    <aside>barra lateral</aside>
-    <section>
-      <Navbar />
-      <section class="d-flex w-100">
+  <main class="h-100">
+    <Navbar />
+    <section class="d-flex flex-row w-100">
+      <Sidebar v-model:is-open="isOpen" />
+      <section class="w-100 p-4">
+        <o-button @click="() => (isOpen = !isOpen)">Open</o-button>
         <slot />
       </section>
     </section>
   </main>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { Navbar } from '@/components';
+import { Sidebar } from './';
 export default defineComponent({
   components: {
     Navbar,
+    Sidebar,
   },
   setup() {
-    return {};
+    const isOpen = ref(true);
+    return { isOpen };
   },
 });
 </script>
