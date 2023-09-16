@@ -35,6 +35,8 @@ export default defineComponent({
   background-color: $light
   .inner-swith
     width: 120px
+    color: $medium-grey
+    // .mdi
   @include media-breakpoint-up($bp-xxl)
     .theme-selector
       max-width: 250px
