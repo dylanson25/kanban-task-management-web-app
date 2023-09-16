@@ -4,6 +4,9 @@ $primary: #635FC7
 $secondary: rgba(99, 95, 199, 0.10)
 $success: #42b983
 $danger: #EA5555
+$dark: #20212C
+$light: #F4F7FD
+
 $darkGrey: #2B2C37
 $navbar-light-color: #000112
 $btn-font-weight: 700
@@ -11,9 +14,11 @@ $btn-font-weight: 700
 $border-color: #E4EBFA
 $light-border-subtle: #E4EBFA
 $dark-border-subtle: #3E3F4E
+$dark-bg-subtle: $dark
+$light-bg-subtle: $light
 
-$body-bg-dark: #20212C
-$body-bg: #F4F7FD
+$body-bg-dark: $dark
+$body-bg: $light
 
 @import "/node_modules/bootstrap/scss/variables"
 @import "/node_modules/bootstrap/scss/variables-dark"
@@ -24,11 +29,7 @@ $body-bg: #F4F7FD
 
 @import "/node_modules/@oruga-ui/theme-bootstrap/dist/scss/bootstrap"
 
-$theme-colors: ( "primary": $primary, "success": $success, "danger": $danger,)
-
-$theme-colors-border-subtle: ("light": $light-border-subtle)
-
-$theme-colors-border-subtle-dark: ("light": $dark-border-subtle)
+$theme-colors: ( "primary": $primary, "success": $success, "danger": $danger, "light": $light, "dark": $dark)
 
 .btn-success,
 .btn-danger,
