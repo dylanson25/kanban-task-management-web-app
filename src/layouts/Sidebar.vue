@@ -2,8 +2,8 @@
   <transition name="sidebar-close">
     <div v-if="open">
       <o-sidebar :open="true" id="sidebar" fullheight position="static">
-        <h3>Example</h3>
         <slot />
+        <SwithTheme />
       </o-sidebar>
     </div>
   </transition>
@@ -11,8 +11,11 @@
 
 <script lang="ts">
 import { defineComponent, ref, toRefs, watch } from 'vue';
-
+import { SwithTheme } from '@/components';
 export default defineComponent({
+  components: {
+    SwithTheme,
+  },
   props: {
     isOpen: { type: Boolean, default: true },
   },
@@ -43,6 +46,7 @@ export default defineComponent({
   overflow-x: hidden
   max-width: 260px
   .offcanvas
+    display: flex
     background-color: $white
 @keyframes sidebar-close-in
   0%
@@ -54,7 +58,7 @@ export default defineComponent({
     width: 260px
   100%
     width: 0px
-@include media-breakpoint-up(xxl)
+@include media-breakpoint-up($bp-xxl)
   :deep(.sidebar)
     max-width: 300px
   @keyframes sidebar-close-in

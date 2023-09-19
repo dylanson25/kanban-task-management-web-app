@@ -6,6 +6,7 @@ import { createPinia } from 'pinia';
 import Oruga from '@oruga-ui/oruga-next';
 import { bootstrapConfig } from '@oruga-ui/theme-bootstrap';
 import '@oruga-ui/theme-bootstrap/dist/bootstrap.css';
+import '@mdi/font/css/materialdesignicons.min.css';
 import '@/assets/sass/style.sass';
 
 import DefaultLayout from './layouts/DefaultLayout.vue';
